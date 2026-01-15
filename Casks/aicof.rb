@@ -3,7 +3,7 @@ cask "aicof" do
   name "aicof"
   desc "CLI for managing the AICoF (Artificial Intelligence Coding Framework)"
   homepage "https://github.com/ar4mirez/aicof"
-  version "1.1.1"
+  version "1.7.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "aicof" do
   on_macos do
     on_intel do
       url "https://github.com/ar4mirez/aicof/releases/download/v#{version}/aicof_#{version}_darwin_amd64.tar.gz"
-      sha256 "ef1cc68dffb76c48029cd9d7b3e1b7b026e4f74e0d3f905e871a4696c39fb44b"
+      sha256 "c939fb8cc1b6b6fb701399e077d528ddcd83e5d85cd44219cdfdd187f0a4539c"
     end
     on_arm do
       url "https://github.com/ar4mirez/aicof/releases/download/v#{version}/aicof_#{version}_darwin_arm64.tar.gz"
-      sha256 "852f29872b56cd1b4e795da257e6b9df95c4fd6edd4e66e942f5eade1f599838"
+      sha256 "93296ccec528dcb4b1eb7dcf8394194491996ebed6ee2852d605ce8787d4c9d0"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ar4mirez/aicof/releases/download/v#{version}/aicof_#{version}_linux_amd64.tar.gz"
-      sha256 "2ee8b9cbace896a87a61a89c18841c8224df20da1953bbf2715a97d690bbb164"
+      sha256 "8b94fd462b5d67f0befe4d26912e7630d9f63fbfedff7ec58f032687137603ce"
     end
     on_arm do
       url "https://github.com/ar4mirez/aicof/releases/download/v#{version}/aicof_#{version}_linux_arm64.tar.gz"
-      sha256 "7cddc12bb2246c9073aa67a89b43ad8788cad1042a9a04437e310c565a6bb01a"
+      sha256 "e58aa5d0e04f148b77b025d6b1bbd517911021dc29bcaac4f9c7c78b4cdcb9b4"
     end
   end
 
