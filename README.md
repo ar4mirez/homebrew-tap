@@ -13,12 +13,7 @@ brew tap ar4mirez/tap
 | Formula | Description | Install |
 |---------|-------------|---------|
 | maia | AI-native distributed memory system with inference integration | `brew install maia` |
-
-## Available Casks
-
-| Cask | Description | Install |
-|------|-------------|---------|
-| aicof | CLI for the AICoF framework | `brew install --cask aicof` |
+| samuel | CLI for the Samuel AI Coding Framework | `brew install samuel` |
 
 ## Usage
 
@@ -45,12 +40,19 @@ maia-mcp --server-url http://localhost:8080
 - `maiactl` - CLI tool for managing MAIA
 - `maia-mcp` - MCP server for IDE integrations (Claude Code, etc.)
 
-### Casks
+### Samuel
 
-After tapping, install any cask:
+Samuel is an AI Coding Framework CLI for managing agent skills, templates, and autonomous coding workflows.
 
 ```bash
-brew install --cask <cask-name>
+# Install Samuel
+brew install ar4mirez/tap/samuel
+
+# Initialize a project
+samuel init
+
+# Check installation health
+samuel doctor
 ```
 
 ## Updating
@@ -58,17 +60,17 @@ brew install --cask <cask-name>
 ```bash
 brew update
 brew upgrade maia
-brew upgrade --cask <cask-name>
+brew upgrade samuel
 ```
 
 ## Uninstalling
 
 ```bash
 brew uninstall maia
-brew uninstall --cask <cask-name>
+brew uninstall samuel
 brew untap ar4mirez/tap  # removes the tap entirely
 ```
 
 ## Contributing
 
-Formulae and casks in this repository are automatically updated via [GoReleaser](https://goreleaser.com) when new releases are published.
+Formulae in this repository are automatically updated via [GoReleaser](https://goreleaser.com) when new releases are published.

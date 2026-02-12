@@ -1,0 +1,36 @@
+class Samuel < Formula
+  desc "CLI for managing the Samuel AI Coding Framework"
+  homepage "https://github.com/ar4mirez/samuel"
+  version "1.7.0"
+  license "MIT"
+
+  on_macos do
+    on_intel do
+      url "https://github.com/ar4mirez/samuel/releases/download/v#{version}/samuel_#{version}_darwin_amd64.tar.gz"
+      sha256 "c939fb8cc1b6b6fb701399e077d528ddcd83e5d85cd44219cdfdd187f0a4539c"
+    end
+    on_arm do
+      url "https://github.com/ar4mirez/samuel/releases/download/v#{version}/samuel_#{version}_darwin_arm64.tar.gz"
+      sha256 "93296ccec528dcb4b1eb7dcf8394194491996ebed6ee2852d605ce8787d4c9d0"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/ar4mirez/samuel/releases/download/v#{version}/samuel_#{version}_linux_amd64.tar.gz"
+      sha256 "8b94fd462b5d67f0befe4d26912e7630d9f63fbfedff7ec58f032687137603ce"
+    end
+    on_arm do
+      url "https://github.com/ar4mirez/samuel/releases/download/v#{version}/samuel_#{version}_linux_arm64.tar.gz"
+      sha256 "e58aa5d0e04f148b77b025d6b1bbd517911021dc29bcaac4f9c7c78b4cdcb9b4"
+    end
+  end
+
+  def install
+    bin.install "samuel"
+  end
+
+  test do
+    system "#{bin}/samuel", "version"
+  end
+end
