@@ -11,7 +11,7 @@ class Samuel < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_darwin_amd64.tar.gz"
-      sha256 "d55747798cc6a64eccdc5e81b5504797321640ad4c2eccb19523e2c8494e8324"
+      sha256 "457604b20383e5309b015673738ebe02a63e2715df164550c68bdb35b6e3eca9"
 
       def install
         bin.install "samuel"
@@ -19,7 +19,7 @@ class Samuel < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_darwin_arm64.tar.gz"
-      sha256 "ba13b37e1bb0dee8f692fd0a5a3160239093bed249449a815fd45b0fd4fc79c6"
+      sha256 "df1cdad0726ca17c9b0ec283b8adf661c0bbcffe8640f43d1d92296168b396fc"
 
       def install
         bin.install "samuel"
@@ -30,14 +30,14 @@ class Samuel < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_linux_amd64.tar.gz"
-      sha256 "e16c82bc745f1023eb2d8756828cbef9e4e7a978f1518b6e1ee10654946bc0a6"
+      sha256 "7edbdd528f1b19a51d017dd7ff273aab2fccd6c0961943ba37f278e3ecc1dd51"
       def install
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_linux_arm64.tar.gz"
-      sha256 "0e51329d84a7f32fcf9df76fa12f2782bbf8532c9bcd69c2c54ee9ca72c6b084"
+      sha256 "6a3e137d07f70da063468cbb5f874477f273947690180deca3e2f7b2d124850a"
       def install
         bin.install "samuel"
       end
