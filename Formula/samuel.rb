@@ -5,21 +5,21 @@
 class Samuel < Formula
   desc "CLI for managing the Samuel AI Coding Framework"
   homepage "https://github.com/ar4mirez/samuel"
-  version "2.3.0"
+  version "2.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.3.0/samuel_2.3.0_darwin_amd64.tar.gz"
-      sha256 "d9214efc41dabe2b20c6654e5577721d560efca350f40c4ca15ba64d3c385f8b"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_darwin_amd64.tar.gz"
+      sha256 "d55747798cc6a64eccdc5e81b5504797321640ad4c2eccb19523e2c8494e8324"
 
       def install
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.3.0/samuel_2.3.0_darwin_arm64.tar.gz"
-      sha256 "ea2fccd40f35d79c7ede556c7b70c38c2ac9558072f3bc955b135ee88b3abc3b"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_darwin_arm64.tar.gz"
+      sha256 "ba13b37e1bb0dee8f692fd0a5a3160239093bed249449a815fd45b0fd4fc79c6"
 
       def install
         bin.install "samuel"
@@ -29,15 +29,15 @@ class Samuel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.3.0/samuel_2.3.0_linux_amd64.tar.gz"
-      sha256 "37f23e36d8d7957067b8fb255f7e47b88988e971b3868a20af73a440010b6349"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_linux_amd64.tar.gz"
+      sha256 "e16c82bc745f1023eb2d8756828cbef9e4e7a978f1518b6e1ee10654946bc0a6"
       def install
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.3.0/samuel_2.3.0_linux_arm64.tar.gz"
-      sha256 "9de09bbbca11350ae4062a732ddfdd4dfe03487182ad7e6c6ca897f74a7db029"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.0/samuel_2.4.0_linux_arm64.tar.gz"
+      sha256 "0e51329d84a7f32fcf9df76fa12f2782bbf8532c9bcd69c2c54ee9ca72c6b084"
       def install
         bin.install "samuel"
       end
