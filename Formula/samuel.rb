@@ -5,23 +5,23 @@
 class Samuel < Formula
   desc "CLI for managing the Samuel AI Coding Framework"
   homepage "https://github.com/ar4mirez/samuel"
-  version "2.4.1"
+  version "2.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.1/samuel_2.4.1_darwin_amd64.tar.gz"
-      sha256 "6e45d27a48e694a12f8a675f74cc81e38fde79fb7ce6905d46015401bb8a5c5b"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.0/samuel_2.5.0_darwin_amd64.tar.gz"
+      sha256 "6cf1f3706e1ec53a02d80c14dde45c901fcf63249a148588a330da9d986cbf09"
 
-      def install
+      define_method(:install) do
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.1/samuel_2.4.1_darwin_arm64.tar.gz"
-      sha256 "53c271e44de3cf67355e7c09be1049092d5e6278dbc0361526163e47f0f797dd"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.0/samuel_2.5.0_darwin_arm64.tar.gz"
+      sha256 "561712e3bd06d0e8f4dbaaf9c1230ec969a4e5943f7f832b458506bb6ea2a5ff"
 
-      def install
+      define_method(:install) do
         bin.install "samuel"
       end
     end
@@ -29,16 +29,16 @@ class Samuel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.1/samuel_2.4.1_linux_amd64.tar.gz"
-      sha256 "48fa2dafc9db9e763e07357528d8a1c7466c9363d1f95d719dfa10348529a2c1"
-      def install
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.0/samuel_2.5.0_linux_amd64.tar.gz"
+      sha256 "72743b655cc7b2ec5f8d1d080f03bc07b3b0a930e71a2b751c0c57067bd265ae"
+      define_method(:install) do
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.4.1/samuel_2.4.1_linux_arm64.tar.gz"
-      sha256 "6487d80008257b231d8cf2347f714b8172260a495219cd103f998092dc4e55f7"
-      def install
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.0/samuel_2.5.0_linux_arm64.tar.gz"
+      sha256 "9aebe253ecc0fa4b924dd6950717789ea459482683ceb5735bb4067aecd5f2dd"
+      define_method(:install) do
         bin.install "samuel"
       end
     end
