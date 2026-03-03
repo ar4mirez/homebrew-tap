@@ -5,21 +5,21 @@
 class Samuel < Formula
   desc "CLI for managing the Samuel AI Coding Framework"
   homepage "https://github.com/ar4mirez/samuel"
-  version "2.5.1"
+  version "2.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.1/samuel_2.5.1_darwin_amd64.tar.gz"
-      sha256 "91852500a00f1700d6448d39e0722099fdd4560eaaf3dc9721bd719e45532b5d"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.1/samuel_2.6.1_darwin_amd64.tar.gz"
+      sha256 "ff48ab8b42361fa0af29472b588b0dd47182564c25d39d956f2611be53c86e2f"
 
       define_method(:install) do
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.1/samuel_2.5.1_darwin_arm64.tar.gz"
-      sha256 "2efb58f28083656449b7c400e27859aa47264b82bd43fd69d4632573f65e8139"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.1/samuel_2.6.1_darwin_arm64.tar.gz"
+      sha256 "4ad1acc30821d89c5d69906ffec6aca6bcf3cd52eb0312ff6a4edfe4cc826cea"
 
       define_method(:install) do
         bin.install "samuel"
@@ -29,15 +29,15 @@ class Samuel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.1/samuel_2.5.1_linux_amd64.tar.gz"
-      sha256 "cac58a1f4caa2b75391801f066836bd84ec530af0737d179a8f650727eb02b42"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.1/samuel_2.6.1_linux_amd64.tar.gz"
+      sha256 "fba7476106db7a9de5d2e9a120805d58c122b9fa22e90758b010730a99d5e520"
       define_method(:install) do
         bin.install "samuel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.5.1/samuel_2.5.1_linux_arm64.tar.gz"
-      sha256 "305e66bb23f1b55e91f3d66bd210d0ec8e0471e60b56a9a3bc27047585a8e3c7"
+      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.1/samuel_2.6.1_linux_arm64.tar.gz"
+      sha256 "abcebcffe1264ac4dba191e7b43458bdadc2add412da4945dba9cfe44e46f9ec"
       define_method(:install) do
         bin.install "samuel"
       end
