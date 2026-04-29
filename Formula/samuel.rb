@@ -5,41 +5,45 @@
 class Samuel < Formula
   desc "CLI for managing the Samuel AI Coding Framework"
   homepage "https://github.com/ar4mirez/samuel"
-  version "2.6.4"
+  version "3.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.4/samuel_2.6.4_darwin_amd64.tar.gz"
-      sha256 "6effcfb2356f2a17edcf2c7ea7dec53bcadecea37dc5af982737d60a33135223"
+      url "https://github.com/ar4mirez/samuel/releases/download/v3.0.0/samuel_3.0.0_darwin_amd64.tar.gz"
+      sha256 "1dedac95294f3958d4007ac6c08a8d957f5a45e2607cf1df375c5ea15bf5acf3"
 
       define_method(:install) do
         bin.install "samuel"
+        generate_completions_from_executable(bin/"samuel", "completion")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.4/samuel_2.6.4_darwin_arm64.tar.gz"
-      sha256 "e87365800c8d55b9c550b029632377bb6aad4c023c08b13c28171e3b4993e533"
+      url "https://github.com/ar4mirez/samuel/releases/download/v3.0.0/samuel_3.0.0_darwin_arm64.tar.gz"
+      sha256 "e7622dfa3a153f1335abed4f111efff226f4cef7bb3d6c89e8bffbb05bd36d34"
 
       define_method(:install) do
         bin.install "samuel"
+        generate_completions_from_executable(bin/"samuel", "completion")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.4/samuel_2.6.4_linux_amd64.tar.gz"
-      sha256 "57f8b753fab1fe4f6ab7a5095d476dc7c51300ed21cc97ab2018285faf5e3081"
+      url "https://github.com/ar4mirez/samuel/releases/download/v3.0.0/samuel_3.0.0_linux_amd64.tar.gz"
+      sha256 "0964da5bfe1349a09ba4e10b8963ac5396973e0a5092bbfcb9da4795309b15a8"
       define_method(:install) do
         bin.install "samuel"
+        generate_completions_from_executable(bin/"samuel", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ar4mirez/samuel/releases/download/v2.6.4/samuel_2.6.4_linux_arm64.tar.gz"
-      sha256 "34816a4ec522327a6a89748cc0709730a332884a193fbf54a9939f8bda28bfb5"
+      url "https://github.com/ar4mirez/samuel/releases/download/v3.0.0/samuel_3.0.0_linux_arm64.tar.gz"
+      sha256 "d7f59669a2cb3610e44f1d4d8df0270141179ba240f142f5c53923adc0956b79"
       define_method(:install) do
         bin.install "samuel"
+        generate_completions_from_executable(bin/"samuel", "completion")
       end
     end
   end
