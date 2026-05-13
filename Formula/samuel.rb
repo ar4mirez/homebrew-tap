@@ -5,13 +5,13 @@
 class Samuel < Formula
   desc "Rails for AI coding assistants"
   homepage "https://samuelpkg.github.io/samuel/"
-  version "2.0.0-rc.13"
+  version "2.0.0-rc.14"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.13/samuel_2.0.0-rc.13_darwin_amd64.tar.gz"
-      sha256 "b6704fc81637dc3c28305375766d2f86e986137651910bab0c5a9d2fea9b9d73"
+      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.14/samuel_2.0.0-rc.14_darwin_amd64.tar.gz"
+      sha256 "aa60b2c92859aa163a2f02247342c3f11763940b1bb4cfa3291ecf6153f852cb"
 
       define_method(:install) do
         bin.install "samuel"
@@ -19,8 +19,8 @@ class Samuel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.13/samuel_2.0.0-rc.13_darwin_arm64.tar.gz"
-      sha256 "cfada9034dceedbd8a0513fc05543f74790b909235822b52b273aa187dea85b4"
+      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.14/samuel_2.0.0-rc.14_darwin_arm64.tar.gz"
+      sha256 "877f9885ce4d21572468617721c361f012b8a22d6b4dd3d79d59b63e8962fe21"
 
       define_method(:install) do
         bin.install "samuel"
@@ -31,16 +31,16 @@ class Samuel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.13/samuel_2.0.0-rc.13_linux_amd64.tar.gz"
-      sha256 "5f86e84804dbd27f4172f980b5fe8b452b530664c4c5ec5f8ab8b255905e63b3"
+      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.14/samuel_2.0.0-rc.14_linux_amd64.tar.gz"
+      sha256 "b612de2dbffe65d5389acbd691e86b9caf664d7cf987c1db45f2331c03a7728e"
       define_method(:install) do
         bin.install "samuel"
         generate_completions_from_executable(bin/"samuel", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.13/samuel_2.0.0-rc.13_linux_arm64.tar.gz"
-      sha256 "4ead8526f87a2c3f8b268e1b38055822255563d7deeb6155a30cbb27858bfd40"
+      url "https://github.com/samuelpkg/samuel/releases/download/v2.0.0-rc.14/samuel_2.0.0-rc.14_linux_arm64.tar.gz"
+      sha256 "bb55f85869ebe524dae20becf44b9a1d0e4cc4d5c764e5516356c24b149f0090"
       define_method(:install) do
         bin.install "samuel"
         generate_completions_from_executable(bin/"samuel", "completion")
