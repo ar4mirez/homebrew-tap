@@ -6,25 +6,25 @@ cask "berth" do
     end
   end
 
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
     on_arm do
-      sha256 "b2c105fb996e99bbee94fde2362a5800801c2ce95ea4c6ace1d309970f878d4b"
+      sha256 "5fee14afb7c3ee854950bcd204db467034346d4d44f9b0b0ce7c9bd24ce61ec4"
       url "https://github.com/ar4mirez/berth/releases/download/v#{version}/berth_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "975755cef277f5d77f1747e2fdc31a84f629607993d9fecf009a72d07af3c198"
+      sha256 "03de512f978ced8cb89dad7da3e549a1173102614b16d67c90fb4ca6882879e5"
       url "https://github.com/ar4mirez/berth/releases/download/v#{version}/berth_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "927f29a0c0ac984b6624e4efb180926c59ab47d146a7340ee009b29d089154ef"
+      sha256 "84e02267db5cb8bf342e73e7a244b4591f11be14b3f0cc0ddf63186fff090108"
       url "https://github.com/ar4mirez/berth/releases/download/v#{version}/berth_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "683c6284aab7b48b96fb07a1fcd3c92d69cfb7642dcd4a13f0ae80bcd3f19130"
+      sha256 "bc4a995d90c67a9e8153d9b41ac0ae0cdefdadbea5bd2b791dffa6d0d82c7d08"
       url "https://github.com/ar4mirez/berth/releases/download/v#{version}/berth_#{version}_linux_amd64.tar.gz"
     end
   end
